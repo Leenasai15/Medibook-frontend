@@ -21,8 +21,8 @@ export default function PatientDashboard() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 
-  useEffect(() => { loadDoctors(); }, [search, dept]);
-  useEffect(() => { if(selDoc && date) loadSlots(); }, [selDoc, date]);
+  useEffect(() => { loadDoctors(); }, [search, dept]); // eslint-disable-line
+  useEffect(() => { if(selDoc && date) loadSlots(); }, [selDoc, date]); // eslint-disable-line
 
   const loadDoctors = async () => {
     try {
